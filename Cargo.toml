@@ -1,0 +1,22 @@
+[package]
+name = "stm32f429"
+version = "0.0.1"
+authors = ["Cody Schafer <dev@codyps.com>"]
+description = "Peripheral access API for STM32F429 microcontrollers"
+documentation = "https://docs.rs/stm32f429"
+keywords = ["arm", "cortex-m", "stm32", "svd2rust"]
+categories = ["embedded", "hardware-support", "no-std"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jmesmon/stm32f429"
+
+[dependencies]
+bare-metal = "0.1"
+cortex-m = "0.4"
+vcell = "0.1"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.3"
+
+[features]
+rt = ["cortex-m-rt"]
