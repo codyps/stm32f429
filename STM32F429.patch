@@ -1,0 +1,20 @@
+diff --git a/STM32F429.svd b/STM32F429_new.svd
+index fb4f5d4..7b0715a 100644
+--- a/STM32F429.svd
++++ b/STM32F429_new.svd
+@@ -48476,8 +48476,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <name>LATENCY</name>
+               <description>Latency</description>
+               <bitOffset>0</bitOffset>
+-              <bitWidth>3</bitWidth>
++              <bitWidth>4</bitWidth>
+               <access>read-write</access>
++              <writeConstraint>
++                <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>PRFTEN</name>

@@ -1,4 +1,15 @@
 #! /bin/sh
 d="$(dirname "$0")"
-svd2rust -i STM32F429.svd >"$d/src/lib.rs"
+t=
+on_exit() {
+	if [ "$t" ]; then
+		rm -f "$t"
+	fi
+}
+trap on_exit EXIT
+t=$(mktemp)
+
+cp "$1" "$t"
+patch "$t" STM32F429.patch
+svd2rust -i "$t" >"$d/src/lib.rs"
 rustfmt "$d/src/lib.rs"
