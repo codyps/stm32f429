@@ -1,8 +1,184 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..f6a1540 100644
+index fb4f5d4..17394ff 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
-@@ -10089,6 +10089,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -9915,36 +9915,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <resetValue>0x24003010</resetValue>
+           <fields>
+             <field>
+-              <name>PLLQ3</name>
+-              <description>Main PLL (PLL) division factor for USB
+-              OTG FS, SDIO and random number generator
+-              clocks</description>
+-              <bitOffset>27</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLQ2</name>
+-              <description>Main PLL (PLL) division factor for USB
+-              OTG FS, SDIO and random number generator
+-              clocks</description>
+-              <bitOffset>26</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLQ1</name>
+-              <description>Main PLL (PLL) division factor for USB
+-              OTG FS, SDIO and random number generator
+-              clocks</description>
+-              <bitOffset>25</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLQ0</name>
++              <name>PLLQ</name>
+               <description>Main PLL (PLL) division factor for USB
+               OTG FS, SDIO and random number generator
+               clocks</description>
+               <bitOffset>24</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>4</bitWidth>
++              <access>read-write</access>
++              <writeRestriction>
++                <range>
++                  <minimum>2</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeRestriction>
+             </field>
+             <field>
+               <name>PLLSRC</name>
+@@ -9954,123 +9937,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+-              <name>PLLP1</name>
+-              <description>Main PLL (PLL) division factor for main
+-              system clock</description>
+-              <bitOffset>17</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLP0</name>
++              <name>PLLP</name>
+               <description>Main PLL (PLL) division factor for main
+               system clock</description>
+               <bitOffset>16</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN8</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>14</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN7</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>13</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN6</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>12</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN5</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>11</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN4</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>10</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN3</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>9</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN2</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>8</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLN1</name>
+-              <description>Main PLL (PLL) multiplication factor for
+-              VCO</description>
+-              <bitOffset>7</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>2</bitWidth>
+             </field>
+             <field>
+-              <name>PLLN0</name>
++              <name>PLLN</name>
+               <description>Main PLL (PLL) multiplication factor for
+               VCO</description>
+               <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLM5</name>
+-              <description>Division factor for the main PLL (PLL)
+-              and audio PLL (PLLI2S) input clock</description>
+-              <bitOffset>5</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLM4</name>
+-              <description>Division factor for the main PLL (PLL)
+-              and audio PLL (PLLI2S) input clock</description>
+-              <bitOffset>4</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLM3</name>
+-              <description>Division factor for the main PLL (PLL)
+-              and audio PLL (PLLI2S) input clock</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLM2</name>
+-              <description>Division factor for the main PLL (PLL)
+-              and audio PLL (PLLI2S) input clock</description>
+-              <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
+-            </field>
+-            <field>
+-              <name>PLLM1</name>
+-              <description>Division factor for the main PLL (PLL)
+-              and audio PLL (PLLI2S) input clock</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>9</bitWidth>
+             </field>
+             <field>
+-              <name>PLLM0</name>
++              <name>PLLM</name>
+               <description>Division factor for the main PLL (PLL)
+               and audio PLL (PLLI2S) input clock</description>
+               <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>6</bitWidth>
+             </field>
+           </fields>
+         </register>
+@@ -10089,6 +9974,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
                <access>read-write</access>
@@ -27,12 +203,12 @@ index fb4f5d4..f6a1540 100644
              </field>
              <field>
                <name>MCO2PRE</name>
-@@ -10134,6 +10152,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10134,6 +10037,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>13</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
 +              <writeConstraint>
-+		            <range>
++                <range>
 +                  <minimum>0</minimum>
 +                  <maximum>7</maximum>
 +                </range>
@@ -40,12 +216,12 @@ index fb4f5d4..f6a1540 100644
              </field>
              <field>
                <name>PPRE1</name>
-@@ -10142,6 +10166,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10142,6 +10051,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>10</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
 +              <writeConstraint>
-+		            <range>
++                <range>
 +                  <minimum>0</minimum>
 +                  <maximum>7</maximum>
 +                </range>
@@ -53,7 +229,7 @@ index fb4f5d4..f6a1540 100644
              </field>
              <field>
                <name>HPRE</name>
-@@ -10149,34 +10179,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10149,34 +10064,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>4</bitOffset>
                <bitWidth>4</bitWidth>
                <access>read-write</access>
@@ -128,7 +304,7 @@ index fb4f5d4..f6a1540 100644
              </field>
            </fields>
          </register>
-@@ -48476,8 +48526,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -48476,8 +48411,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <name>LATENCY</name>
                <description>Latency</description>
                <bitOffset>0</bitOffset>
