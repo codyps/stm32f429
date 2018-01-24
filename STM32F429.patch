@@ -1,8 +1,134 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..7b0715a 100644
+index fb4f5d4..f6a1540 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
-@@ -48476,8 +48476,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10089,6 +10089,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
+               <access>read-write</access>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>SYSCLK</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLLI2S</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLL</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MCO2PRE</name>
+@@ -10134,6 +10152,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <bitOffset>13</bitOffset>
+               <bitWidth>3</bitWidth>
+               <access>read-write</access>
++              <writeConstraint>
++		            <range>
++                  <minimum>0</minimum>
++                  <maximum>7</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>PPRE1</name>
+@@ -10142,6 +10166,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <bitOffset>10</bitOffset>
+               <bitWidth>3</bitWidth>
+               <access>read-write</access>
++              <writeConstraint>
++		            <range>
++                  <minimum>0</minimum>
++                  <maximum>7</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+               <name>HPRE</name>
+@@ -10149,34 +10179,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <bitOffset>4</bitOffset>
+               <bitWidth>4</bitWidth>
+               <access>read-write</access>
++              <writeConstraint>
++		            <range>
++                  <minimum>0</minimum>
++                  <maximum>15</maximum>
++                </range>
++              </writeConstraint>
+             </field>
+             <field>
+-              <name>SWS1</name>
+-              <description>System clock switch status</description>
+-              <bitOffset>3</bitOffset>
+-              <bitWidth>1</bitWidth>
+-              <access>read-only</access>
+-            </field>
+-            <field>
+-              <name>SWS0</name>
++              <name>SWS</name>
+               <description>System clock switch status</description>
+               <bitOffset>2</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>2</bitWidth>
+               <access>read-only</access>
+-            </field>
+-            <field>
+-              <name>SW1</name>
+-              <description>System clock switch</description>
+-              <bitOffset>1</bitOffset>
+-              <bitWidth>1</bitWidth>
+-              <access>read-write</access>
+-            </field>
+-            <field>
+-              <name>SW0</name>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLL</name>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
++            </field>
++            <field>
++              <name>SW</name>
+               <description>System clock switch</description>
+               <bitOffset>0</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <bitWidth>2</bitWidth>
+               <access>read-write</access>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLL</name>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -48476,8 +48526,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <name>LATENCY</name>
                <description>Latency</description>
                <bitOffset>0</bitOffset>

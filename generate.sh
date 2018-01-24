@@ -11,5 +11,4 @@ t=$(mktemp)
 
 cp "$1" "$t"
 patch "$t" STM32F429.patch
-svd2rust -i "$t" >"$d/src/lib.rs"
-rustfmt "$d/src/lib.rs"
+svd2rust -i "$t" | rustfmt >"$d/src/lib.rs"
