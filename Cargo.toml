@@ -8,6 +8,7 @@ keywords = ["arm", "cortex-m", "stm32", "svd2rust"]
 categories = ["embedded", "hardware-support", "no-std"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/jmesmon/stm32f429"
+include = ["Cargo.toml", "**/*.rs", "generate.sh", "STM32F429.patch", "README.md", "LICENSE-*"]
 
 [dependencies]
 bare-metal = "0.1"
