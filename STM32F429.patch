@@ -1,8 +1,29 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..ca4a62f 100644
+index fb4f5d4..f2cd20e 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
-@@ -9915,36 +9915,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -9813,6 +9813,20 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <size>0x20</size>
+           <resetValue>0x00000083</resetValue>
+           <fields>
++            <field>
++              <name>PLLSAIRDY</name>
++              <description>PLLSAI clock ready flag</description>
++              <bitOffset>29</bitOffset>
++              <bitWidth>1</bitWidth>
++              <access>read-only</access>
++            </field>
++            <field>
++              <name>PLLSAION</name>
++              <description>PLLSAI enable</description>
++              <bitOffset>28</bitOffset>
++              <bitWidth>1</bitWidth>
++              <access>read-write</access>
++            </field>
+             <field>
+               <name>PLLI2SRDY</name>
+               <description>PLLI2S clock ready flag</description>
+@@ -9915,36 +9929,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
            <resetValue>0x24003010</resetValue>
            <fields>
              <field>
@@ -48,7 +69,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
              <field>
                <name>PLLSRC</name>
-@@ -9952,125 +9935,37 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -9952,125 +9949,37 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                entry clock source</description>
                <bitOffset>22</bitOffset>
                <bitWidth>1</bitWidth>
@@ -190,7 +211,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
            </fields>
          </register>
-@@ -10089,6 +9984,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10089,6 +9998,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
                <access>read-write</access>
@@ -215,7 +236,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
              <field>
                <name>MCO2PRE</name>
-@@ -10134,6 +10047,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10134,6 +10061,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>13</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -228,7 +249,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
              <field>
                <name>PPRE1</name>
-@@ -10142,6 +10061,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10142,6 +10075,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>10</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -241,7 +262,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
              <field>
                <name>HPRE</name>
-@@ -10149,34 +10074,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10149,34 +10088,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>4</bitOffset>
                <bitWidth>4</bitWidth>
                <access>read-write</access>
@@ -316,7 +337,7 @@ index fb4f5d4..ca4a62f 100644
              </field>
            </fields>
          </register>
-@@ -48476,8 +48421,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -48476,8 +48435,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <name>LATENCY</name>
                <description>Latency</description>
                <bitOffset>0</bitOffset>
