@@ -1,5 +1,5 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..e0ee3e3 100644
+index fb4f5d4..2f9868b 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
 @@ -9813,6 +9813,20 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -539,7 +539,297 @@ index fb4f5d4..e0ee3e3 100644
              </field>
            </fields>
          </register>
-@@ -48476,8 +48497,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12123,6 +12144,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>15</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <name>OTYPER</name>
++                <enumeratedValue>
++                  <description>Output push pull (reset state)</description>
++                  <name>push_pull</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <description>Output open drain</description>
++                  <name>open_drain</name>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OT14</name>
+@@ -12130,6 +12164,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT13</name>
+@@ -12137,6 +12172,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>13</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT12</name>
+@@ -12144,6 +12180,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT11</name>
+@@ -12151,6 +12188,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>11</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT10</name>
+@@ -12158,6 +12196,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT9</name>
+@@ -12165,6 +12204,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT8</name>
+@@ -12172,6 +12212,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT7</name>
+@@ -12179,6 +12220,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>7</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT6</name>
+@@ -12186,6 +12228,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT5</name>
+@@ -12193,6 +12236,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT4</name>
+@@ -12200,6 +12244,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT3</name>
+@@ -12207,6 +12252,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT2</name>
+@@ -12214,6 +12260,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT1</name>
+@@ -12221,6 +12268,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>1</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+             <field>
+               <name>OT0</name>
+@@ -12228,6 +12276,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="OTYPER" />
+             </field>
+           </fields>
+         </register>
+@@ -12247,6 +12296,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>OSPEEDR</name>
++                <enumeratedValue>
++                  <description>Low speed</description>
++                  <name>low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <description>Medium speed</description>
++                  <name>medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <description>High speed</description>
++                  <name>high</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <description>Very high speed</description>
++                  <name>VERY_HIGH</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR14</name>
+@@ -12254,6 +12326,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR13</name>
+@@ -12261,6 +12334,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR12</name>
+@@ -12268,6 +12342,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR11</name>
+@@ -12275,6 +12350,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR10</name>
+@@ -12282,6 +12358,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR9</name>
+@@ -12289,6 +12366,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR8</name>
+@@ -12296,6 +12374,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR7</name>
+@@ -12303,6 +12382,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR6</name>
+@@ -12310,6 +12390,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR5</name>
+@@ -12317,6 +12398,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR4</name>
+@@ -12324,6 +12406,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR3</name>
+@@ -12331,6 +12414,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR2</name>
+@@ -12338,6 +12422,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR1</name>
+@@ -12345,6 +12430,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+             <field>
+               <name>OSPEEDR0</name>
+@@ -12352,6 +12438,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEEDR" />
+             </field>
+           </fields>
+         </register>
+@@ -48476,8 +48563,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <name>LATENCY</name>
                <description>Latency</description>
                <bitOffset>0</bitOffset>
