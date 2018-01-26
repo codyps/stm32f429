@@ -1,6 +1,6 @@
 [package]
 name = "stm32f429"
-version = "0.2.7"
+version = "0.2.8"
 authors = ["Cody Schafer <dev@codyps.com>"]
 description = "Peripheral access API for STM32F429 microcontrollers"
 documentation = "https://docs.rs/stm32f429"
