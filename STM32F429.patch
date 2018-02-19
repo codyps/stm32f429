@@ -1,5 +1,5 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..dd7f13e 100644
+index fb4f5d4..67d145a 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
 @@ -6817,6 +6817,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
@@ -1150,7 +1150,7 @@ index fb4f5d4..dd7f13e 100644
 -              <bitWidth>1</bitWidth>
 +              <description>Pass control frames</description>
 +              <bitOffset>6</bitOffset>
-+              <bitWidth>1</bitWidth>
++              <bitWidth>2</bitWidth>
 +              <enumeratedValues>
 +                <enumeratedValue>
 +                  <name>no_control_frames</name>
@@ -1173,22 +1173,25 @@ index fb4f5d4..dd7f13e 100644
              <field>
                <name>SAIF</name>
 -              <description>SAIF</description>
+-              <bitOffset>7</bitOffset>
 +              <description>Source address inverse filtering</description>
-               <bitOffset>7</bitOffset>
++              <bitOffset>8</bitOffset>
                <bitWidth>1</bitWidth>
              </field>
              <field>
                <name>SAF</name>
 -              <description>SAF</description>
+-              <bitOffset>8</bitOffset>
 +              <description>Source address filter</description>
-               <bitOffset>8</bitOffset>
++              <bitOffset>9</bitOffset>
                <bitWidth>1</bitWidth>
              </field>
              <field>
                <name>HPF</name>
 -              <description>HPF</description>
+-              <bitOffset>9</bitOffset>
 +              <description>Hash or perfect filter</description>
-               <bitOffset>9</bitOffset>
++              <bitOffset>10</bitOffset>
                <bitWidth>1</bitWidth>
 +              <enumeratedValues>
 +                <enumeratedValue>
@@ -1267,7 +1270,7 @@ index fb4f5d4..dd7f13e 100644
 +                <enumeratedValue>
 +                  <name>div102</name>
 +                  <description>150-168 MHz HCLK/102</description>
-+                  <value>3</value>
++                  <value>4</value>
 +                </enumeratedValue>
 +              </enumeratedValues>
              </field>
