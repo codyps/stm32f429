@@ -1,8 +1,33 @@
 diff --git a/STM32F429.svd b/STM32F429_new.svd
-index fb4f5d4..a120ac2 100644
+index fb4f5d4..dd7f13e 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
-@@ -9813,6 +9813,20 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -6817,6 +6817,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <description>TRACE_MODE</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>ASYNC</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SYNC1</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SYNC2</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SYNC4</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -9813,6 +9831,20 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
            <size>0x20</size>
            <resetValue>0x00000083</resetValue>
            <fields>
@@ -23,7 +48,7 @@ index fb4f5d4..a120ac2 100644
              <field>
                <name>PLLI2SRDY</name>
                <description>PLLI2S clock ready flag</description>
-@@ -9915,36 +9929,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -9915,36 +9947,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
            <resetValue>0x24003010</resetValue>
            <fields>
              <field>
@@ -69,7 +94,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>PLLSRC</name>
-@@ -9952,125 +9949,55 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -9952,125 +9967,55 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                entry clock source</description>
                <bitOffset>22</bitOffset>
                <bitWidth>1</bitWidth>
@@ -231,7 +256,7 @@ index fb4f5d4..a120ac2 100644
              </field>
            </fields>
          </register>
-@@ -10089,6 +10016,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10089,6 +10034,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
                <access>read-write</access>
@@ -257,7 +282,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MCO2PRE</name>
-@@ -10096,6 +10042,41 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10096,6 +10060,41 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>27</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -299,7 +324,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MCO1PRE</name>
-@@ -10103,6 +10084,13 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10103,6 +10102,13 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>24</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -313,7 +338,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>I2SSRC</name>
-@@ -10110,6 +10098,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10110,6 +10116,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>23</bitOffset>
                <bitWidth>1</bitWidth>
                <access>read-write</access>
@@ -330,7 +355,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MCO1</name>
-@@ -10118,6 +10116,28 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10118,6 +10134,28 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>21</bitOffset>
                <bitWidth>2</bitWidth>
                <access>read-write</access>
@@ -359,7 +384,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>RTCPRE</name>
-@@ -10134,6 +10154,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10134,6 +10172,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>13</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -372,7 +397,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>PPRE1</name>
-@@ -10142,6 +10168,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10142,6 +10186,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>10</bitOffset>
                <bitWidth>3</bitWidth>
                <access>read-write</access>
@@ -385,7 +410,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>HPRE</name>
-@@ -10149,34 +10181,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -10149,34 +10199,54 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <bitOffset>4</bitOffset>
                <bitWidth>4</bitWidth>
                <access>read-write</access>
@@ -460,7 +485,7 @@ index fb4f5d4..a120ac2 100644
              </field>
            </fields>
          </register>
-@@ -12000,6 +12052,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12000,6 +12070,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
@@ -490,7 +515,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER14</name>
-@@ -12007,6 +12082,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12007,6 +12100,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>28</bitOffset>
                <bitWidth>2</bitWidth>
@@ -498,7 +523,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER13</name>
-@@ -12014,6 +12090,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12014,6 +12108,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>26</bitOffset>
                <bitWidth>2</bitWidth>
@@ -506,7 +531,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER12</name>
-@@ -12021,6 +12098,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12021,6 +12116,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>24</bitOffset>
                <bitWidth>2</bitWidth>
@@ -514,7 +539,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER11</name>
-@@ -12028,6 +12106,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12028,6 +12124,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>22</bitOffset>
                <bitWidth>2</bitWidth>
@@ -522,7 +547,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER10</name>
-@@ -12035,6 +12114,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12035,6 +12132,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>20</bitOffset>
                <bitWidth>2</bitWidth>
@@ -530,7 +555,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER9</name>
-@@ -12042,6 +12122,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12042,6 +12140,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>18</bitOffset>
                <bitWidth>2</bitWidth>
@@ -538,7 +563,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER8</name>
-@@ -12049,6 +12130,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12049,6 +12148,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>16</bitOffset>
                <bitWidth>2</bitWidth>
@@ -546,7 +571,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER7</name>
-@@ -12056,6 +12138,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12056,6 +12156,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>14</bitOffset>
                <bitWidth>2</bitWidth>
@@ -554,7 +579,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER6</name>
-@@ -12063,6 +12146,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12063,6 +12164,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>12</bitOffset>
                <bitWidth>2</bitWidth>
@@ -562,7 +587,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER5</name>
-@@ -12070,6 +12154,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12070,6 +12172,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
@@ -570,7 +595,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER4</name>
-@@ -12077,6 +12162,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12077,6 +12180,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -578,7 +603,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER3</name>
-@@ -12084,6 +12170,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12084,6 +12188,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>6</bitOffset>
                <bitWidth>2</bitWidth>
@@ -586,7 +611,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER2</name>
-@@ -12091,6 +12178,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12091,6 +12196,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>4</bitOffset>
                <bitWidth>2</bitWidth>
@@ -594,7 +619,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER1</name>
-@@ -12098,6 +12186,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12098,6 +12204,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
@@ -602,7 +627,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>MODER0</name>
-@@ -12105,6 +12194,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12105,6 +12212,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>0</bitOffset>
                <bitWidth>2</bitWidth>
@@ -610,7 +635,7 @@ index fb4f5d4..a120ac2 100644
              </field>
            </fields>
          </register>
-@@ -12123,6 +12213,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12123,6 +12231,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>15</bitOffset>
                <bitWidth>1</bitWidth>
@@ -630,7 +655,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT14</name>
-@@ -12130,6 +12233,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12130,6 +12251,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>14</bitOffset>
                <bitWidth>1</bitWidth>
@@ -638,7 +663,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT13</name>
-@@ -12137,6 +12241,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12137,6 +12259,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>13</bitOffset>
                <bitWidth>1</bitWidth>
@@ -646,7 +671,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT12</name>
-@@ -12144,6 +12249,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12144,6 +12267,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>12</bitOffset>
                <bitWidth>1</bitWidth>
@@ -654,7 +679,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT11</name>
-@@ -12151,6 +12257,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12151,6 +12275,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>11</bitOffset>
                <bitWidth>1</bitWidth>
@@ -662,7 +687,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT10</name>
-@@ -12158,6 +12265,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12158,6 +12283,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>10</bitOffset>
                <bitWidth>1</bitWidth>
@@ -670,7 +695,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT9</name>
-@@ -12165,6 +12273,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12165,6 +12291,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>9</bitOffset>
                <bitWidth>1</bitWidth>
@@ -678,7 +703,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT8</name>
-@@ -12172,6 +12281,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12172,6 +12299,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>8</bitOffset>
                <bitWidth>1</bitWidth>
@@ -686,7 +711,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT7</name>
-@@ -12179,6 +12289,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12179,6 +12307,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>7</bitOffset>
                <bitWidth>1</bitWidth>
@@ -694,7 +719,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT6</name>
-@@ -12186,6 +12297,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12186,6 +12315,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>6</bitOffset>
                <bitWidth>1</bitWidth>
@@ -702,7 +727,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT5</name>
-@@ -12193,6 +12305,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12193,6 +12323,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>5</bitOffset>
                <bitWidth>1</bitWidth>
@@ -710,7 +735,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT4</name>
-@@ -12200,6 +12313,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12200,6 +12331,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>4</bitOffset>
                <bitWidth>1</bitWidth>
@@ -718,7 +743,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT3</name>
-@@ -12207,6 +12321,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12207,6 +12339,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>3</bitOffset>
                <bitWidth>1</bitWidth>
@@ -726,7 +751,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT2</name>
-@@ -12214,6 +12329,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12214,6 +12347,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>2</bitOffset>
                <bitWidth>1</bitWidth>
@@ -734,7 +759,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT1</name>
-@@ -12221,6 +12337,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12221,6 +12355,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>1</bitOffset>
                <bitWidth>1</bitWidth>
@@ -742,7 +767,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OT0</name>
-@@ -12228,6 +12345,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12228,6 +12363,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>0</bitOffset>
                <bitWidth>1</bitWidth>
@@ -750,7 +775,7 @@ index fb4f5d4..a120ac2 100644
              </field>
            </fields>
          </register>
-@@ -12247,6 +12365,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12247,6 +12383,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>30</bitOffset>
                <bitWidth>2</bitWidth>
@@ -780,7 +805,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR14</name>
-@@ -12254,6 +12395,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12254,6 +12413,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>28</bitOffset>
                <bitWidth>2</bitWidth>
@@ -788,7 +813,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR13</name>
-@@ -12261,6 +12403,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12261,6 +12421,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>26</bitOffset>
                <bitWidth>2</bitWidth>
@@ -796,7 +821,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR12</name>
-@@ -12268,6 +12411,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12268,6 +12429,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>24</bitOffset>
                <bitWidth>2</bitWidth>
@@ -804,7 +829,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR11</name>
-@@ -12275,6 +12419,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12275,6 +12437,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>22</bitOffset>
                <bitWidth>2</bitWidth>
@@ -812,7 +837,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR10</name>
-@@ -12282,6 +12427,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12282,6 +12445,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>20</bitOffset>
                <bitWidth>2</bitWidth>
@@ -820,7 +845,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR9</name>
-@@ -12289,6 +12435,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12289,6 +12453,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>18</bitOffset>
                <bitWidth>2</bitWidth>
@@ -828,7 +853,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR8</name>
-@@ -12296,6 +12443,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12296,6 +12461,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>16</bitOffset>
                <bitWidth>2</bitWidth>
@@ -836,7 +861,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR7</name>
-@@ -12303,6 +12451,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12303,6 +12469,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>14</bitOffset>
                <bitWidth>2</bitWidth>
@@ -844,7 +869,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR6</name>
-@@ -12310,6 +12459,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12310,6 +12477,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>12</bitOffset>
                <bitWidth>2</bitWidth>
@@ -852,7 +877,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR5</name>
-@@ -12317,6 +12467,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12317,6 +12485,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>10</bitOffset>
                <bitWidth>2</bitWidth>
@@ -860,7 +885,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR4</name>
-@@ -12324,6 +12475,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12324,6 +12493,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>8</bitOffset>
                <bitWidth>2</bitWidth>
@@ -868,7 +893,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR3</name>
-@@ -12331,6 +12483,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12331,6 +12501,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>6</bitOffset>
                <bitWidth>2</bitWidth>
@@ -876,7 +901,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR2</name>
-@@ -12338,6 +12491,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12338,6 +12509,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>4</bitOffset>
                <bitWidth>2</bitWidth>
@@ -884,7 +909,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR1</name>
-@@ -12345,6 +12499,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12345,6 +12517,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>2</bitOffset>
                <bitWidth>2</bitWidth>
@@ -892,7 +917,7 @@ index fb4f5d4..a120ac2 100644
              </field>
              <field>
                <name>OSPEEDR0</name>
-@@ -12352,6 +12507,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -12352,6 +12525,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                0..15)</description>
                <bitOffset>0</bitOffset>
                <bitWidth>2</bitWidth>
@@ -900,7 +925,494 @@ index fb4f5d4..a120ac2 100644
              </field>
            </fields>
          </register>
-@@ -48476,8 +48632,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+@@ -26712,99 +26886,156 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <fields>
+             <field>
+               <name>RE</name>
+-              <description>RE</description>
++              <description>Recieve enable</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>TE</name>
+-              <description>TE</description>
++              <description>Transmit enable</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>DC</name>
+-              <description>DC</description>
++              <description>Deferral check</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>BL</name>
+-              <description>BL</description>
++              <description>Back-off limit</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>r10</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>r8</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>r4</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>r1</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>APCS</name>
+-              <description>APCS</description>
++              <description>Automatic pad/CRC stripping</description>
+               <bitOffset>7</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>RD</name>
+-              <description>RD</description>
++              <description>Retry disable</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>IPCO</name>
+-              <description>IPCO</description>
++              <description>IPv4 Checksum offload</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>DM</name>
+-              <description>DM</description>
++              <description>Duplex mode</description>
+               <bitOffset>11</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>LM</name>
+-              <description>LM</description>
++              <description>Loopback mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>ROD</name>
+-              <description>ROD</description>
++              <description>Recieve own disable</description>
+               <bitOffset>13</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>FES</name>
+-              <description>FES</description>
++              <description>Fast Ethernet Speed</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>rate_10</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>rate_100</name>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CSD</name>
+-              <description>CSD</description>
++              <description>Carrier sense disable</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>IFG</name>
+-              <description>IFG</description>
++              <description>Interframe gap (96,86,80, ... 40)</description>
+               <bitOffset>17</bitOffset>
+               <bitWidth>3</bitWidth>
++              <writeRestiction>
++                <range>
++                  <maximum>31</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestiction>
+             </field>
+             <field>
+               <name>JD</name>
+-              <description>JD</description>
++              <description>Jabber disable (transmitter)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <name>WD</name>
++                <enumeratedValue>
++                  <name>limit2048</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>limit16384</name>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>WD</name>
+-              <description>WD</description>
++              <description>Watchdog Disable (reciever)</description>
+               <bitOffset>23</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues derivedFrom="WD"></enumeratedValues>
+             </field>
+             <field>
+               <name>CSTF</name>
+-              <description>CSTF</description>
++              <description>CRC stripping for type frames</description>
+               <bitOffset>25</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <name>CSTF</name>
++                <enumeratedValue>
++                  <name>keep_ether_crc</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>strip_ether_crc</name>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -26820,67 +27051,95 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <fields>
+             <field>
+               <name>PM</name>
+-              <description>PM</description>
++              <description>Promiscuous mode</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>HU</name>
+-              <description>HU</description>
++              <description>Hash unicast</description>
+               <bitOffset>1</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>HM</name>
+-              <description>HM</description>
++              <description>Hash multicast</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>DAIF</name>
+-              <description>DAIF</description>
++              <description>Destination address inverse filtering</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+-              <name>RAM</name>
+-              <description>RAM</description>
++              <name>PAM</name>
++              <description>Pass all multicast</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>BFD</name>
+-              <description>BFD</description>
++              <description>Broadcast frames enable</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>PCF</name>
+-              <description>PCF</description>
+-              <bitOffset>6</bitOffset>
+-              <bitWidth>1</bitWidth>
++              <description>Pass control frames</description>
++              <bitOffset>6</bitOffset>
++              <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>no_control_frames</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>no_pause_frames</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>control_frames_bypass_filter</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>control_frames</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SAIF</name>
+-              <description>SAIF</description>
++              <description>Source address inverse filtering</description>
+               <bitOffset>7</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>SAF</name>
+-              <description>SAF</description>
++              <description>Source address filter</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>HPF</name>
+-              <description>HPF</description>
++              <description>Hash or perfect filter</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <enumeratedValue>
++                  <name>both_filters</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>only_hash_filter</name>
++                  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>RA</name>
+-              <description>RA</description>
++              <description>Recieve All</description>
+               <bitOffset>31</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+@@ -26901,6 +27160,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <description>HTH</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>32</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>0xffffffff</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+           </fields>
+         </register>
+@@ -26919,6 +27184,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+               <description>HTL</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>32</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>0xffffffff</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+           </fields>
+         </register>
+@@ -26946,21 +27217,61 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+             </field>
+             <field>
+               <name>CR</name>
+-              <description>CR</description>
++              <description>Clock Range</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>CR</name>
++                <enumeratedValue>
++                  <name>div42</name>
++                  <description>60-100 MHz HCLK/42</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>div62</name>
++                  <description>100-150 MHz HCLK/62</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>div16</name>
++                  <description>20-35 MHz HCLK/16</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>div26</name>
++                  <description>35-60 MHz HCLK/26</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>div102</name>
++                  <description>150-168 MHz HCLK/102</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MR</name>
+-              <description>MR</description>
++              <description>MII Register - select the desired MII register in the PHY device</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>5</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>31</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+             <field>
+               <name>PA</name>
+-              <description>PA</description>
++              <description>PHY address - select which of possible 32 phys is being accessed</description>
+               <bitOffset>11</bitOffset>
+               <bitWidth>5</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>31</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+           </fields>
+         </register>
+@@ -26974,10 +27285,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <resetValue>0x00000000</resetValue>
+           <fields>
+             <field>
+-              <name>TD</name>
+-              <description>TD</description>
++              <name>MD</name>
++              <description>MII data read from the PHY or to be written to the PHY</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>0xffff</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+           </fields>
+         </register>
+@@ -26993,45 +27310,51 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <fields>
+             <field>
+               <name>FCB</name>
+-              <description>FCB</description>
++              <description>Flow control busy/back pressure activate</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>TFCE</name>
+-              <description>TFCE</description>
++              <description>Transmit flow control enable</description>
+               <bitOffset>1</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>RFCE</name>
+-              <description>RFCE</description>
++              <description>Recieve flow control enable</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>UPFD</name>
+-              <description>UPFD</description>
++              <description>Unicast pause frame detect</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>PLT</name>
+-              <description>PLT</description>
++              <description>Pause low threshold</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
+             </field>
+             <field>
+               <name>ZQPD</name>
+-              <description>ZQPD</description>
++              <description>Zero-quanta pause disable</description>
+               <bitOffset>7</bitOffset>
+               <bitWidth>1</bitWidth>
+             </field>
+             <field>
+               <name>PT</name>
+-              <description>PT</description>
++              <description>Pause time</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>0xffff</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+           </fields>
+         </register>
+@@ -27046,15 +27369,32 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+           <fields>
+             <field>
+               <name>VLANTI</name>
+-              <description>VLANTI</description>
++              <description>VLAN tag identifier (for recieve frames)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>16</bitWidth>
++              <writeRestriction>
++                <range>
++                  <maximum>0xffff</maximum>
++                  <minimum>0</minimum>
++                </range>
++              </writeRestriction>
+             </field>
+             <field>
+               <name>VLANTC</name>
+-              <description>VLANTC</description>
++              <description>12-bit VLAN tag comparison</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>1</bitWidth>
++              <enumeratedValues>
++                <name>VLANTC</name>
++                <enumeratedValue>
++                  <name>cmp16</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>cmp12</name>
++		  <value>1</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -48476,8 +48816,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <name>LATENCY</name>
                <description>Latency</description>
                <bitOffset>0</bitOffset>
