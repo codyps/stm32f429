@@ -1431,3 +1431,80 @@ index fb4f5d4..67d145a 100644
              </field>
              <field>
                <name>PRFTEN</name>
+@@ -57582,5 +57582,76 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+         </register>
+       </registers>
+     </peripheral>
++
++    <peripheral>
++      <name>DEVICE_ID</name>
++      <description>Unique device ID</description>
++      <groupName>DEVICE_ID</groupName>
++      <baseAddress>0x1FFF7A10</baseAddress>
++      <addressBlock>
++        <offset>0x0</offset>
++        <size>0x60</size>
++        <usage>registers</usage>
++      </addressBlock>
++      <registers>
++        <register>
++          <name>UID1</name>
++          <displayName>UID1</displayName>
++          <description>X and Y coordinates on the wafer</description>
++          <addressOffset>0x0</addressOffset>
++          <size>0x20</size>
++          <access>read-only</access>
++          <fields>
++            <field>
++              <name>UID</name>
++              <description>X and Y coordinates on the wafer</description>
++              <bitOffset>0</bitOffset>
++              <bitWidth>32</bitWidth>
++              <access>read-only</access>
++            </field>
++          </fields>
++        </register>
++        <register>
++          <name>UID2</name>
++          <displayName>UID2</displayName>
++          <description>Lot/wafer number</description>
++          <addressOffset>0x4</addressOffset>
++          <size>0x20</size>
++          <fields>
++            <field>
++              <name>LOT_NUM</name>
++              <description>Lot number (ASCII encoded, end)</description>
++              <bitOffset>8</bitOffset>
++              <bitWidth>24</bitWidth>
++              <access>read-only</access>
++            </field>
++            <field>
++              <name>WAF_NUM</name>
++              <description>Wafer number (ASCII encoded)</description>
++              <bitOffset>0</bitOffset>
++              <bitWidth>8</bitWidth>
++              <access>read-only</access>
++            </field>
++          </fields>
++        </register>
++        <register>
++          <name>UID3</name>
++          <displayName>UID3</displayName>
++          <description>Lot number</description>
++          <addressOffset>0x8</addressOffset>
++          <size>0x20</size>
++          <fields>
++            <field>
++              <name>LOT_NUM</name>
++              <description>Lot number (ASCII encoded, start)</description>
++              <bitOffset>0</bitOffset>
++              <bitWidth>32</bitWidth>
++              <access>read-only</access>
++            </field>
++          </fields>
++        </register>
++      </registers>
++    </peripheral>
++
+   </peripherals>
+ </device>
