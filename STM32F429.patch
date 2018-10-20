@@ -2,6 +2,33 @@ diff --git a/STM32F429.svd b/STM32F429_new.svd
 index fb4f5d4..67d145a 100644
 --- a/STM32F429.svd
 +++ b/STM32F429_new.svd
+@@ -4,16 +4,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+   <name>STM32F429</name>
+   <version>1.2</version>
+-  <description>STM32F429</description>
+-  <!-- details about the cpu embedded in the device -->
+-  <cpu>
+-    <name>CM4</name>
+-    <revision>r1p0</revision>
+-    <endian>little</endian>
+-    <mpuPresent>false</mpuPresent>
+-    <fpuPresent>false</fpuPresent>
+-    <nvicPrioBits>3</nvicPrioBits>
+-    <vendorSystickConfig>false</vendorSystickConfig>
++  <description>STM32F429</description>
++  <!-- details about the cpu embedded in the device -->
++  <cpu>
++    <name>CM4</name>
++    <revision>r1p0</revision>
++    <endian>little</endian>
++    <mpuPresent>false</mpuPresent>
++    <fpuPresent>false</fpuPresent>
++    <nvicPrioBits>3</nvicPrioBits>
++    <vendorSystickConfig>false</vendorSystickConfig>
+   </cpu>  
+   <!--Bus Interface Properties-->
+   <!--Cortex-M4 is byte addressable-->
 @@ -6817,6 +6817,24 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                <description>TRACE_MODE</description>
                <bitOffset>6</bitOffset>
@@ -415,7 +442,7 @@ index fb4f5d4..67d145a 100644
                <bitWidth>4</bitWidth>
                <access>read-write</access>
 +              <writeConstraint>
-+		            <range>
++		 <range>
 +                  <minimum>0</minimum>
 +                  <maximum>15</maximum>
 +                </range>
