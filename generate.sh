@@ -14,7 +14,10 @@ cp "$1" "$t" || exit 1
 patch -lN "$t" STM32F429.patch
 
 svd2rust --target cortex-m -i "$t" || exit 1
-rustfmt lib.rs
 rustfmt build.rs
 mkdir -p src
-mv lib.rs src/
+form -i lib.rs -o src
+rm lib.rs
+for f in $(find src/ -name "*.rs"); do
+    rustfmt $f
+done
