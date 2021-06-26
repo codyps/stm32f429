@@ -11,7 +11,7 @@ repository = "https://github.com/jmesmon/stm32f429"
 include = ["Cargo.toml", "**/*.rs", "generate.sh", "STM32F429.patch", "README.md", "LICENSE-*", "device.x"]
 
 [dependencies]
-bare-metal = "0.2"
+bare-metal = "1.0"
 cortex-m = { version = "0.5", features = ["const-fn"] }
 vcell = "0.1"
 
